@@ -163,7 +163,7 @@
                         <id>enforce</id>
                         <configuration>
                             <rules>
-                                <dependencyConvergence/>
+                                <!-- <dependencyConvergence/> -->
                                 <banDuplicatePomDependencyVersions/>
                                 <requireMavenVersion>
                                     <version>3.6.3</version>
@@ -185,50 +185,11 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!--
-            <plugin>
-                <groupId>io.swagger.codegen.v3</groupId>
-                <artifactId>swagger-codegen-maven-plugin</artifactId>
-                <version>3.0.31</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.github.jknack</groupId>
-                        <artifactId>handlebars</artifactId>
-                        <version>4.3.0</version>
-                    </dependency>
-                </dependencies>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>swagger.yaml</inputSpec>
-                            <language>java</language>
-                            <library>resttemplate</library>
-                            <apiPackage>io.jab.maven.swagger2java.api</apiPackage>
-                            <modelPackage>io.jab.maven.swagger2java.model</modelPackage>
-                            <invokerPackage>io.jab.maven.swagger2java.handler</invokerPackage>
-                            <generateApiTests>false</generateApiTests>
-                            <generateApiDocumentation>false</generateApiDocumentation>
-                            <generateModelTests>false</generateModelTests>
-                            <generateModelDocumentation>false</generateModelDocumentation>
-                            <generateSupportingFiles>true</generateSupportingFiles>
-                            <configOptions>
-                                <interfaceOnly>true</interfaceOnly>
-                                <dateLibrary>java8</dateLibrary>
-                            </configOptions>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            -->
-
         </plugins>
     </build>
 
     <modules>
         <module>swagger-codegen</module>
+        <module>openapi-generator</module>
     </modules>
 </project>
