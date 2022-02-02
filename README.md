@@ -16,3 +16,4 @@ mvn clean verify
 - https://editor.swagger.io/
 - https://www.thecodejournal.tech/2021/02/generating-code-using-maven-swagger-to-java/
 - https://openapi-generator.tech/docs/swagger-codegen-migration/
+- https://www.baeldung.com/spring-rest-openapi-documentation
