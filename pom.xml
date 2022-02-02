@@ -21,7 +21,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
 
-        <!-- <spotless.check.skip>true</spotless.check.skip> -->
+        <spotless.check.skip>true</spotless.check.skip>
     </properties>
 
     <build>
@@ -29,6 +29,10 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
+                <configuration>
+                    <showDeprecation>true</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -172,5 +176,7 @@
     <modules>
         <module>swagger-codegen</module>
         <module>openapi-generator</module>
+        <module>openapi-spring-petclinic-server</module>
+        <module>openapi-spring-petclinic-client</module>
     </modules>
 </project>
