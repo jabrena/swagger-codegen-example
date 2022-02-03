@@ -3,9 +3,8 @@ package com.jab.ms;
 import com.jab.ms.openapi.gen.api.OwnerApi;
 import com.jab.ms.openapi.gen.client.ApiClient;
 import com.jab.ms.openapi.gen.model.OwnerDto;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 @Service
 public class RestAccountService implements AccountService {
