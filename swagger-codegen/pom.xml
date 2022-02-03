@@ -4,16 +4,16 @@
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.jab.microservices</groupId>
-    <artifactId>swagger-codegen</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
-
     <parent>
-        <groupId>com.jab.microservices</groupId>
-        <artifactId>swagger-poc</artifactId>
+        <groupId>com.jab.ms</groupId>
+        <artifactId>openapi-poc</artifactId>
         <version>0.1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+
+    <groupId>com.jab.ms</groupId>
+    <artifactId>swagger-codegen</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
 
     <dependencies>
 
@@ -53,7 +53,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>swagger.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/../openapi-specs/swagger.yaml</inputSpec>
                             <language>java</language>
                             <library>resttemplate</library>
                             <apiPackage>io.jab.maven.swagger2java.api</apiPackage>
